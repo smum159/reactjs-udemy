@@ -2,14 +2,16 @@
 /* import { heroes, owners } from "./data/heroes"; */
 
 // Import where we take the default and the individual exports
-import heroes, {owners} from "./data/heroes";
+import heroes, {owners} from "../data/heroes";
 
-const getHeroById = (id) => {
+export const getHeroById = (id) => {
     return heroes.find(heroe => heroe.id === id);
 }
-console.log(getHeroById(3));
+// console.log(getHeroById(3));
 
-const getHeroByOwner = (owner) => heroes.filter( heroe => heroe.owner === owner);
-console.log(getHeroByOwner('Marvel'));
+export const getHeroByOwner = (owner) => heroes.filter( heroe => heroe.owner === owner);
+// console.log(getHeroByOwner('Marvel'));
 
-console.log(owners);
+console.log('Heroes Owners are: ', owners);
+
+
