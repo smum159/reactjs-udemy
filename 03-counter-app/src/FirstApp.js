@@ -4,7 +4,7 @@
 import { Fragment } from "react";
 
 // there could be the possiblity to still find those way of coding.
-const FirstApp = () => {
+export const FirstApp = () => {
 
     return <h1>Hello Friend</h1>
 }
@@ -17,18 +17,18 @@ export const FirstAppWrappedElements = () => {
 
         // Implementig divs or any other html that we could need. Take note that any of the
         // tags implemented will be render to along with your elements in it
-        <div>
+        /* <div>
             <h1>Hi Buddy!</h1>
             <p>How you doing?</p>
-        </div>
+        </div> */
 
         // Implementing React's fragment component will allow us to wrap our
         // elements in a component that will not render any extra elements that we
         // couldn't want contraty to the example above
-        /* <Fragment>
+        <Fragment>
             <h1>Hi Buddy!</h1>
             <p>How you doing?</p>
-        </Fragment> */
+        </Fragment>
         
         // Using empty tags will also work and 
         // this one is a short way similar to implement Reacts Fragment component
@@ -40,4 +40,28 @@ export const FirstAppWrappedElements = () => {
 
 }
 
-export default FirstApp;
+export const FirstAppVariablesPrinting = () => {
+
+    const day = 24
+    const month = "March"
+    const year = [2,0,2,2]
+    const user = {
+        nombre: "Juan",
+        edad: 30
+    }
+    return (
+        // We can print many type of variables on react in order to do that the first step
+        // is to wrap them between curved brackets {}.
+        // Take note of the following examples
+        <>
+            {/* We can print object properties */}
+            <h1>Hello User: {user.nombre}</h1>
+            {/* we can also print string, numbers, and also take note on the array
+            it will print each element separated but this will be render in a single line */}
+            <p>Today is {month} {day} {year}</p>
+            <p>Here's your all your info:</p> 
+            {/* We also can print full objects but these would need to go through a stringify process */}
+            <p>{JSON.stringify(user)}</p>
+        </>
+    )
+}

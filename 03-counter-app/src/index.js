@@ -1,4 +1,4 @@
-import FirstApp,  {FirstAppWrappedElements} from './FirstApp';
+import { FirstApp, FirstAppWrappedElements, FirstAppVariablesPrinting } from './FirstApp';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -8,4 +8,4 @@ import './index.css';
 const divRoot = document.querySelector('#root');
 
 // Here we're declaring to render our greet const inside our the divRoot element we found
-ReactDOM.render([<FirstApp/>, <FirstAppWrappedElements/>],divRoot);
+ReactDOM.render([<FirstApp/>, <FirstAppWrappedElements/>, <FirstAppVariablesPrinting/>],divRoot);
