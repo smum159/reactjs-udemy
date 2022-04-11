@@ -2,6 +2,7 @@
 // create component in React. It is used to use classes instead functions
 
 import { Fragment } from "react";
+import PropTypes from 'prop-types';
 
 export const FirstApp = () => {
 
@@ -84,4 +85,21 @@ export const FirstAppImplProps2 = ({greeting, user = 'Perez'}) => {
     // an advantage here is that we can assign default values to those props that could
     // come undefined.
     return <h1>{greeting} {user}</h1>
+}
+
+// The past two examples have a lack, and this is that these need props to work but
+// they don't force the developer to send those props. For the next example we are gonna
+// make use of the 'PropTypes'. Take note of the proper import at the top.
+
+export const FirstAppImplPropsTypes = ({userName = "missing name"}) => {
+    return <h1>Hello {userName}, welcome back!</h1>
+}
+
+// By implementing proptypes for our component, we can define the type of the property we want
+// to get for our component. In this case we are specifying a type string.
+// Also take note of the last annotation in the proptype 'isRequired' with this we make sure
+// that the property we are specifying is required for our component and if this one isn't
+// provided a new error will be triggered. 
+FirstAppImplPropsTypes.propTypes = {
+    userName: PropTypes.string.isRequired
 }
