@@ -8,4 +8,4 @@ import './index.css';
 const divRoot = document.querySelector('#root');
 
 // Here we're declaring to render our greet const inside our the divRoot element we found
-ReactDOM.render(<FirstAppImplPropsTypes userName='Jimmy'/>,divRoot);
+ReactDOM.render(<FirstAppImplPropsTypes userName='Luis'/>,divRoot);

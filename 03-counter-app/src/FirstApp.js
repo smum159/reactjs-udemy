@@ -91,8 +91,13 @@ export const FirstAppImplProps2 = ({greeting, user = 'Perez'}) => {
 // they don't force the developer to send those props. For the next example we are gonna
 // make use of the 'PropTypes'. Take note of the proper import at the top.
 
-export const FirstAppImplPropsTypes = ({userName = "missing name"}) => {
-    return <h1>Hello {userName}, welcome back!</h1>
+export const FirstAppImplPropsTypes = ({userName, weekday}) => {
+    return( 
+        <>
+            <h1>Hello {userName}, welcome back!</h1>
+            <p>Today is {weekday}</p>
+        </>
+    )
 }
 
 // By implementing proptypes for our component, we can define the type of the property we want
@@ -101,5 +106,14 @@ export const FirstAppImplPropsTypes = ({userName = "missing name"}) => {
 // that the property we are specifying is required for our component and if this one isn't
 // provided a new error will be triggered. 
 FirstAppImplPropsTypes.propTypes = {
-    userName: PropTypes.string.isRequired
+    userName: PropTypes.string.isRequired,
+    weekday: PropTypes.string.isRequired
+}
+// We also are able to set default values on a more organized way instead of specifying these
+// at the top of our component by creating a 'defaultProps' object such as this. This can
+// be use as a fail save and as visual feedback for our component to point out of missing
+// props in our compoent
+FirstAppImplPropsTypes.defaultProps = {
+    userName: "No user name added",
+    weekday: "No weekday added"
 }
