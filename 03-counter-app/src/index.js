@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import { createRoot } from 'react-dom/client';
 import CounterApp from './CounterApp';
 import './index.css';
 
@@ -7,5 +7,5 @@ import './index.css';
 const divRoot = document.querySelector('#root');
 
 // Here we're declaring to render our greet const inside our the divRoot element we found
-const root = ReactDOM.createRoot(divRoot);
+const root = createRoot(divRoot);
 root.render(<CounterApp counterValue={3}/>);
