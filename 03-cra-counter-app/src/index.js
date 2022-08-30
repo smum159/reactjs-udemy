@@ -1,6 +1,6 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import CounterApp from './CounterApp';
+import CounterApp from './03-counter/CounterApp';
 import './index.css';
 
 // Here we are referencing the 'root' div in the public/index.html file
