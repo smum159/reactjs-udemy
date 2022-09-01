@@ -1,5 +1,5 @@
 {
-  "name": "03-counter-app",
+  "name": "03-cra-counter-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
