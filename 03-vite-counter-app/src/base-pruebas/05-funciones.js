@@ -4,18 +4,18 @@
 //     return `Hola, ${ nombre }`;
 // }
 
-const saludar2 = ( nombre ) => {
-    return `Hola, ${ nombre }`;
-}
+// const saludar2 = ( nombre ) => {
+//     return `Hola, ${ nombre }`;
+// }
 
-const saludar3 = ( nombre ) => `Hola, ${ nombre }`;
-const saludar4 = () => `Hola Mundo`;
+// const saludar3 = ( nombre ) => `Hola, ${ nombre }`;
+// const saludar4 = () => `Hola Mundo`;
 
 // console.log( saludar('Goku') )
 
-console.log( saludar2('Vegeta') );
-console.log( saludar3('Goku') );
-console.log( saludar4() );
+// console.log( saludar2('Vegeta') );
+// console.log( saludar3('Goku') );
+// console.log( saludar4() );
 
 
 const getUser = () => ({
@@ -24,8 +24,8 @@ const getUser = () => ({
 });
 
 
-const user = getUser();
-console.log(user);
+// const user = getUser();
+// console.log(user);
 
 // Tarea
 const getUsuarioActivo = ( nombre ) =>({
@@ -33,8 +33,8 @@ const getUsuarioActivo = ( nombre ) =>({
     username: nombre
 })
 
-const usuarioActivo = getUsuarioActivo('Fernando');
-console.log( usuarioActivo );
+// const usuarioActivo = getUsuarioActivo('Fernando');
+// console.log( usuarioActivo );
 
 
 
